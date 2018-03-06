@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  ACApplicationCore.h
 //  RSSNewsReader
 //
 //  Created by Guest User on 06/03/2018.
 //  Copyright © 2018 Guest User. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UIViewController
-
+@interface ACApplicationCore : NSObject
 
 @end
-
