@@ -20,6 +20,7 @@
 		ACDCCB2E204F012000335024 /* UINewsArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACDCCB2C204F012000335024 /* UINewsArticleTableViewCell.xib */; };
 		ACDCCB32204F065F00335024 /* ACRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDCCB31204F065F00335024 /* ACRSSParser.m */; };
 		ACDCCB36204F0E9D00335024 /* ACRSSParserConstants.h in Sources */ = {isa = PBXBuildFile; fileRef = ACDCCB34204F0CF100335024 /* ACRSSParserConstants.h */; };
+		ACDCCB3A204F1BC400335024 /* ACNewsDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDCCB39204F1BC400335024 /* ACNewsDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		ACDCCB30204F065F00335024 /* ACRSSParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACRSSParser.h; sourceTree = "<group>"; };
 		ACDCCB31204F065F00335024 /* ACRSSParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACRSSParser.m; sourceTree = "<group>"; };
 		ACDCCB34204F0CF100335024 /* ACRSSParserConstants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = ACRSSParserConstants.h; sourceTree = "<group>"; };
+		ACDCCB38204F1BC400335024 /* ACNewsDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACNewsDataManager.h; sourceTree = "<group>"; };
+		ACDCCB39204F1BC400335024 /* ACNewsDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACNewsDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		ACDCCB05204EEB2200335024 /* Application Core */ = {
 			isa = PBXGroup;
 			children = (
+				ACDCCB37204F1BAB00335024 /* ACNewsDataManager */,
 				ACDCCB2F204F063D00335024 /* ACRSSParser */,
 				ACDCCB1C204EF08300335024 /* ACRequestManager */,
 				ACDCCB15204EEEAE00335024 /* Model */,
@@ -173,6 +177,15 @@
 				ACDCCB34204F0CF100335024 /* ACRSSParserConstants.h */,
 			);
 			path = ACRSSParserConstants;
+			sourceTree = "<group>";
+		};
+		ACDCCB37204F1BAB00335024 /* ACNewsDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				ACDCCB38204F1BC400335024 /* ACNewsDataManager.h */,
+				ACDCCB39204F1BC400335024 /* ACNewsDataManager.m */,
+			);
+			path = ACNewsDataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +268,7 @@
 				ACDCCB1F204EF0C900335024 /* ACRequestManager.m in Sources */,
 				ACDCCB36204F0E9D00335024 /* ACRSSParserConstants.h in Sources */,
 				ACDCCB0A204EEBA400335024 /* UINewsTableViewController.m in Sources */,
+				ACDCCB3A204F1BC400335024 /* ACNewsDataManager.m in Sources */,
 				ACDCCB18204EEECD00335024 /* ACNewsArticle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

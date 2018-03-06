@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ACNewsDataManager.h"
+
 @interface ACApplicationCore : NSObject
+
+@property (nonatomic, strong) ACNewsDataManager *newsDataManager;
+
++ (instancetype)sharedInstance;
 
 @end

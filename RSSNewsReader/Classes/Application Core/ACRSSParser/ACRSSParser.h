@@ -10,7 +10,13 @@
 
 #define kRSSUrl @"http://www.lemonde.fr/rss/une.xml"
 
-@interface ACRSSParser : NSObject <NSXMLParserDelegate>
+@protocol ACRSSParserDelegate
+- (void)finishedParsingWithResult:(NSArray *)items;
+@end
+
+@interface ACRSSParser : NSObject 
+
+@property (nonatomic, weak) id<ACRSSParserDelegate> delegate;
 
 - (void)startParsing;
 

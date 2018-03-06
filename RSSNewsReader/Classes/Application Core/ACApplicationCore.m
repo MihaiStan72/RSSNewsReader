@@ -8,6 +8,10 @@
 
 #import "ACApplicationCore.h"
 
+@interface ACApplicationCore ()
+
+@end
+
 @implementation ACApplicationCore
 
 + (instancetype)sharedInstance {
@@ -15,7 +19,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[ACApplicationCore alloc] init];
-        // Do any other initialisation stuff here
+        sharedInstance.newsDataManager = [[ACNewsDataManager alloc] init];
     });
     return sharedInstance;
 }

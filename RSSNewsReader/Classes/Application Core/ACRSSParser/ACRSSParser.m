@@ -10,7 +10,7 @@
 
 #import "ACRSSParserConstants.h"
 
-@interface ACRSSParser ()
+@interface ACRSSParser() <NSXMLParserDelegate>
 
 @property (nonatomic, strong) NSXMLParser *xmlParser;
 
