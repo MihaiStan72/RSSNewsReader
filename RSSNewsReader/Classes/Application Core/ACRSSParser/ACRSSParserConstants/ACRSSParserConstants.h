@@ -9,5 +9,13 @@
 #ifndef ACRSSParserConstants_h
 #define ACRSSParserConstants_h
 
+#pragma mark - Element keys
+#define kItemKey @"item"
+#define kTitleKey @"title"
+#define kDescriptionKey @"description"
+#define kLinkKey @"link"
+#define kEnclosureKey @"enclosure"
+
+#define kImageURLAttributeKey @"url"
 
 #endif /* ACRSSParserConstants_h */

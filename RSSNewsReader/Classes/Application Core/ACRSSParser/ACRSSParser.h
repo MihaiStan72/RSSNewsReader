@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ACRSSParser : NSObject
+#define kRSSUrl @"http://www.lemonde.fr/rss/une.xml"
+
+@interface ACRSSParser : NSObject <NSXMLParserDelegate>
+
+- (void)startParsing;
 
 @end

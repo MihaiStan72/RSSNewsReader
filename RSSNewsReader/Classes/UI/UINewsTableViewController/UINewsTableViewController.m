@@ -11,6 +11,7 @@
 #import "ACNewsArticle.h"
 #import "UINewsArticleTableViewCell.h"
 
+
 #define kCellIdentifier @"newsCell"
 
 @interface UINewsTableViewController ()
@@ -35,7 +36,7 @@
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([UINewsArticleTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kCellIdentifier];
     [self setupDataSource];
 }
@@ -54,6 +55,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 300;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UINewsArticleTableViewCell *cell = (UINewsArticleTableViewCell *)[tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
     if (cell == nil) {
