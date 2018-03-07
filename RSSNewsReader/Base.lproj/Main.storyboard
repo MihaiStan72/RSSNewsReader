@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,7 +51,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1jS-1g-hVV" userLabel="Title Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1jS-1g-hVV" userLabel="Title Label">
                                 <rect key="frame" x="8" y="72" width="359" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jpD-tg-9d4"/>
@@ -61,8 +60,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Szn-ko-Se8">
-                                <rect key="frame" x="16" y="120" width="343" height="314"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Szn-ko-Se8">
+                                <rect key="frame" x="16" y="120" width="343" height="460.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1I5-1x-pQj" userLabel="Full article">
                                 <rect key="frame" x="151.5" y="617" width="71" height="30"/>
@@ -70,9 +69,12 @@
                                     <constraint firstAttribute="height" constant="30" id="OjC-oA-W8u"/>
                                 </constraints>
                                 <state key="normal" title="Full article"/>
+                                <connections>
+                                    <action selector="clickedFullArticleButton:" destination="l0j-qx-OP9" eventType="touchUpInside" id="Fcm-M9-kob"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNV-bm-R25" userLabel="Description Label">
-                                <rect key="frame" x="16" y="442" width="343" height="167"/>
+                                <rect key="frame" x="16" y="588.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -91,7 +93,6 @@
                             <constraint firstItem="e2P-GO-AAa" firstAttribute="trailing" secondItem="Szn-ko-Se8" secondAttribute="trailing" constant="16" id="Wp2-Bs-B3i"/>
                             <constraint firstItem="e2P-GO-AAa" firstAttribute="trailing" secondItem="VNV-bm-R25" secondAttribute="trailing" constant="16" id="cly-1B-Owg"/>
                             <constraint firstItem="VNV-bm-R25" firstAttribute="top" secondItem="Szn-ko-Se8" secondAttribute="bottom" constant="8" id="dAD-3l-ERh"/>
-                            <constraint firstItem="VNV-bm-R25" firstAttribute="height" relation="greaterThanOrEqual" secondItem="Szn-ko-Se8" secondAttribute="height" multiplier="0.5" constant="10" id="m9d-f5-9JE"/>
                             <constraint firstItem="1jS-1g-hVV" firstAttribute="top" secondItem="e2P-GO-AAa" secondAttribute="top" constant="8" id="y2m-xf-evH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e2P-GO-AAa"/>

@@ -24,20 +24,9 @@
     self.descriptionLabel.text = self.article.descriptionString;
     self.imageView.image = [UIImage imageWithData:self.article.imageData];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)clickedFullArticleButton:(UIButton *)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.article.link] options:@{} completionHandler:nil];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
