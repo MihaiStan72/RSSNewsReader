@@ -12,6 +12,8 @@
 
 @interface ACNewsDataManager : NSObject
 
+@property (readonly, nonatomic, strong) NSArray *currentDataSource;
+
 - (void)startLoadingData;
 
 @end

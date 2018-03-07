@@ -9,6 +9,8 @@
 #ifndef ACRSSParserConstants_h
 #define ACRSSParserConstants_h
 
+#define kRSSUrl @"http://www.lemonde.fr/rss/une.xml"
+
 #pragma mark - Element keys
 #define kItemKey @"item"
 #define kTitleKey @"title"

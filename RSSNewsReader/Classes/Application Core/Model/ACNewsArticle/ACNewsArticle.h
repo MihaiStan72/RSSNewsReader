@@ -13,7 +13,9 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *descriptionString;
 @property (nonatomic, strong) NSString *imageURL;
+@property (nonatomic, strong) NSString *link;
+@property (nonatomic, strong) NSData   *imageData;
 
-- (instancetype)initWithTitle:(NSString *)title descriptionString:(NSString *)descriptionString andImageURL:(NSString *)imageURL;
+- (instancetype)initWithTitle:(NSString *)title descriptionString:(NSString *)descriptionString link:(NSString *)link andImageURL:(NSString *)imageURL;
 
 @end

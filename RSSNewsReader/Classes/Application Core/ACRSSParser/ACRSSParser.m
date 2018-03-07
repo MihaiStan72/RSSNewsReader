@@ -8,8 +8,6 @@
 
 #import "ACRSSParser.h"
 
-#import "ACRSSParserConstants.h"
-
 @interface ACRSSParser() <NSXMLParserDelegate>
 
 @property (nonatomic, strong) NSXMLParser *xmlParser;
@@ -95,11 +93,15 @@
     }
     if ([elementName isEqualToString:kItemKey]) {
         [self.itemsArray addObject:self.itemDictionary];
+        self.itemDictionary = [[NSMutableDictionary alloc] initWithCapacity:0];
     }
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    //TODO POST NOTIFICATION
+    if (self.delegate != nil) {
+        [self.delegate finishedParsingWithResult:self.itemsArray];
+    }
+    NSLog(@"%@", self.itemsArray);
 
 }
 @end

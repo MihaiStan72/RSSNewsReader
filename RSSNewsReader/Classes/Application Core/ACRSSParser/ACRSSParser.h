@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define kRSSUrl @"http://www.lemonde.fr/rss/une.xml"
+#import "ACRSSParserConstants.h"
 
 @protocol ACRSSParserDelegate
 - (void)finishedParsingWithResult:(NSArray *)items;

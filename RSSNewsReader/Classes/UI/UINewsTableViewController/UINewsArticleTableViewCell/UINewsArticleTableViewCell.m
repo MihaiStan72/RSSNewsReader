@@ -23,4 +23,9 @@
     [self.activityIndicator startAnimating];
 }
 
+- (void)decorateWithImage:(UIImage *)image {
+    self.articleImageView.image = image;
+    [self.activityIndicator stopAnimating];
+}
+
 @end

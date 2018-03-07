@@ -10,13 +10,15 @@
 
 @implementation ACNewsArticle
 
-- (instancetype)initWithTitle:(NSString *)title descriptionString:(NSString *)descriptionString andImageURL:(NSString *)imageURL {
+- (instancetype)initWithTitle:(NSString *)title descriptionString:(NSString *)descriptionString link:(NSString *)link andImageURL:(NSString *)imageURL {
     self = [super init];
     
     if (self) {
         self.title = title;
         self.descriptionString = descriptionString;
         self.imageURL = imageURL;
+        self.link = link;
+        self.imageData = nil;
     }
     
     return self;

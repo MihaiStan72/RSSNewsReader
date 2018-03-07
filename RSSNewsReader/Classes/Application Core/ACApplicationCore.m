@@ -20,6 +20,7 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[ACApplicationCore alloc] init];
         sharedInstance.newsDataManager = [[ACNewsDataManager alloc] init];
+        sharedInstance.requestManager = [[ACRequestManager alloc] init];
     });
     return sharedInstance;
 }

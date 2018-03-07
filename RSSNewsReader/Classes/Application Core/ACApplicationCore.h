@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 #import "ACNewsDataManager.h"
+#import "ACRequestManager.h"
 
 @interface ACApplicationCore : NSObject
 
 @property (nonatomic, strong) ACNewsDataManager *newsDataManager;
+@property (nonatomic, strong) ACRequestManager *requestManager;
 
 + (instancetype)sharedInstance;
 

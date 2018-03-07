@@ -11,5 +11,6 @@
 @interface UINewsArticleTableViewCell : UITableViewCell
 
 - (void)decorateWithTitle:(NSString *)title;
+- (void)decorateWithImage:(UIImage *)image;
 
 @end
