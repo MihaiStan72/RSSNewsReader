@@ -20,20 +20,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="299.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0k-Jd-6MU" userLabel="Title">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0k-Jd-6MU" userLabel="Title">
                         <rect key="frame" x="16" y="11" width="288" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="duS-EB-cX0" userLabel="Article Image View">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="no_photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="duS-EB-cX0" userLabel="Article Image View">
                         <rect key="frame" x="24" y="40" width="272" height="249"/>
-                        <color key="backgroundColor" white="0.73398437500000002" alpha="1" colorSpace="calibratedWhite"/>
                     </imageView>
                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tXI-mT-iJo">
                         <rect key="frame" x="142" y="146" width="37" height="37"/>
+                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </activityIndicatorView>
                 </subviews>
+                <color key="backgroundColor" white="0.91972656249999996" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="D0k-Jd-6MU" secondAttribute="trailing" id="6Ci-C9-Ux2"/>
                     <constraint firstItem="D0k-Jd-6MU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Cod-iE-x2e"/>
@@ -45,6 +46,11 @@
                     <constraint firstAttribute="trailingMargin" secondItem="duS-EB-cX0" secondAttribute="trailing" constant="8" id="qXF-X6-GDb"/>
                     <constraint firstItem="duS-EB-cX0" firstAttribute="top" secondItem="D0k-Jd-6MU" secondAttribute="bottom" constant="8" id="zOn-2d-ikU"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                        <integer key="value" value="1"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
@@ -55,4 +61,7 @@
             <point key="canvasLocation" x="-16" y="-85"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="no_photo.png" width="400" height="200"/>
+    </resources>
 </document>

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UINewsTableViewController : UITableViewController
+#import "ACNewsDataManager.h"
+
+@interface UINewsTableViewController : UITableViewController <ACNewsDataManagerDelegate>
 
 @end

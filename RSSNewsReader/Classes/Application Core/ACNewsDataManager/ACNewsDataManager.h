@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#define kFinishedLoadingNotificationName @"FinishedLoading"
+@protocol ACNewsDataManagerDelegate
+- (void)finishedFetchingNews:(NSArray *)newsArray;
+@end
 
 @interface ACNewsDataManager : NSObject
 
-@property (readonly, nonatomic, strong) NSArray *currentDataSource;
+@property (nonatomic, weak) id<ACNewsDataManagerDelegate> delegate;
 
 - (void)startLoadingData;
 

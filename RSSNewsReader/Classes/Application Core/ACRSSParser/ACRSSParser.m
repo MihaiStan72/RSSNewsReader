@@ -26,7 +26,7 @@
 
 @implementation ACRSSParser
 
-
+#pragma mark - Init
 - (instancetype)init {
     self = [super init];
     
@@ -38,11 +38,24 @@
     }
     return self;
 }
-
+#pragma mark - Public methods
 - (void)startParsing {
     [self.xmlParser parse];
 }
 
+#pragma mark - Private methods
+- (void)freeMemory {
+    self.item = nil;
+    self.itemsArray = nil;
+    self.title = nil;
+    self.itemDescription = nil;
+    self.link = nil;
+    self.currentElement = nil;
+    self.itemDictionary = nil;
+    self.imageURL = nil;
+}
+
+#pragma mark - XMLParser delegate
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict {
     if ([elementName isEqualToString:kItemKey]) {
         self.currentElement = elementName;
@@ -101,7 +114,6 @@
     if (self.delegate != nil) {
         [self.delegate finishedParsingWithResult:self.itemsArray];
     }
-    NSLog(@"%@", self.itemsArray);
-
+    [self freeMemory];
 }
 @end

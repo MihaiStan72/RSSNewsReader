@@ -14,7 +14,6 @@
 @interface ACNewsDataManager () <ACRSSParserDelegate>
 
 @property (nonatomic, strong) ACRSSParser *parser;
-@property (nonatomic, strong) NSArray *currentDataSource;
 
 @end
 
@@ -38,13 +37,14 @@
         ACNewsArticle *newsArticle = [[ACNewsArticle alloc] initWithTitle:title descriptionString:description link:link andImageURL:imageURL];
         [dataSourceArray addObject:newsArticle];
     }
-    self.currentDataSource = dataSourceArray;
+    if (self.delegate != nil) {
+        [self.delegate finishedFetchingNews:dataSourceArray];
+    }
 }
 
 #pragma mark - ACRSSParserDelegate methods
 - (void)finishedParsingWithResult:(NSArray *)items {
     [self createDataSourceArrayWithItems:items];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kFinishedLoadingNotificationName object:nil];
 }
 
 

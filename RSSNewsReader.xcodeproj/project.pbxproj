@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC941308204FD64E00D624A3 /* ACRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC941307204FD64E00D624A3 /* ACRequestManager.m */; };
 		AC94130C2050045C00D624A3 /* UINewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94130B2050045C00D624A3 /* UINewsDetailViewController.m */; };
+		ACC1C5372051994C00E4AE06 /* no_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC1C5362051994C00E4AE06 /* no_photo.png */; };
 		ACDCCAF0204EE84100335024 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDCCAEF204EE84100335024 /* AppDelegate.m */; };
 		ACDCCAF6204EE84100335024 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDCCAF4204EE84100335024 /* Main.storyboard */; };
 		ACDCCAF8204EE84100335024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDCCAF7204EE84100335024 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		AC941307204FD64E00D624A3 /* ACRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACRequestManager.m; sourceTree = "<group>"; };
 		AC94130A2050045C00D624A3 /* UINewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UINewsDetailViewController.h; sourceTree = "<group>"; };
 		AC94130B2050045C00D624A3 /* UINewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UINewsDetailViewController.m; sourceTree = "<group>"; };
+		ACC1C5362051994C00E4AE06 /* no_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_photo.png; sourceTree = "<group>"; };
 		ACDCCAEB204EE84100335024 /* RSSNewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSNewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDCCAEE204EE84100335024 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACDCCAEF204EE84100335024 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = UINewsDetailViewController;
 			sourceTree = "<group>";
 		};
+		ACC1C5352051993500E4AE06 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ACC1C5362051994C00E4AE06 /* no_photo.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		ACDCCAE2204EE84100335024 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		ACDCCAED204EE84100335024 /* RSSNewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				ACC1C5352051993500E4AE06 /* Images */,
 				ACDCCB04204EEAFE00335024 /* Classes */,
 				ACDCCAEE204EE84100335024 /* AppDelegate.h */,
 				ACDCCAEF204EE84100335024 /* AppDelegate.m */,
@@ -261,6 +272,7 @@
 				ACDCCAFB204EE84100335024 /* LaunchScreen.storyboard in Resources */,
 				ACDCCAF8204EE84100335024 /* Assets.xcassets in Resources */,
 				ACDCCAF6204EE84100335024 /* Main.storyboard in Resources */,
+				ACC1C5372051994C00E4AE06 /* no_photo.png in Resources */,
 				ACDCCB2E204F012000335024 /* UINewsArticleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
