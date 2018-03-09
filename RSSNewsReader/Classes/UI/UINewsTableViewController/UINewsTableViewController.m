@@ -31,12 +31,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Setup
-- (void)setupDataSource {
-    ACNewsArticle *debugArticle = [[ACNewsArticle alloc] initWithTitle:@"News title" descriptionString:@"Description string" link:@"" andImageURL:@""];
-    self.dataSource = [[NSArray alloc] initWithObjects:debugArticle, debugArticle, debugArticle, nil];
-}
-
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
